@@ -1,6 +1,7 @@
 "use client"
 
-import { IconDefinition, faGithub, faInstagram, faLinkedin, faGlobe } from "@fortawesome/free-brands-svg-icons"
+import { IconDefinition, faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Container } from "@mui/material"
 import sdLight from "@/assets/logos/sd/light.png"
@@ -72,7 +73,7 @@ const cardItems: CardItem[] = [
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2017313'
     },
     {
-        photo: '', name: 'Harithaa s', designation: 'Operations and HR lead', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: '', name: 'Harithaa S', designation: 'Operations and HR lead', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faLinkedin, href: 'https://www.linkedin.com/in/harithaa-s-665a78201' },
             { icon: faInstagram, href: 'https://www.instagram.com/_.hari.thaa._/' }
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018116'
@@ -86,7 +87,7 @@ function Card(props: CardItem) {
         <p className="text-yellow">{props.designation}</p>
         <p>{props.rollNo}</p>
         <p>{props.about}</p>
-        <div className="flex gap-4 ">
+        <div className="flex gap-4">
             {props.domains.map((domain, i) => <span key={i} className="bg-crust rounded px-2 py-1 text-sm text-subtext0">{domain}</span>)}
         </div>
         <div className="flex gap-4">
