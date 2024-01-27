@@ -37,7 +37,7 @@ const sidebarItems = [
 export default function Sidebar({ open, setOpen }: { open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) {
     const checkActivePath = useActivePath()
     const isMobile = useMediaQuery("(max-width:640px)")
-    return <div className="sticky flex justify-between bg-mantle" style={{ width: isMobile ? '100%' : open ? "10rem" : "4rem", height: isMobile ? open ? "100dvh" : "56px" : "100vh", right: open ? 0 : undefined, top: 0, bottom: 0 }}>
+    return <div className="sticky flex justify-between bg-mantle" style={{ width: isMobile ? '100%' : open ? "10rem" : "4rem", height: isMobile ? open ? "100dvh" : "56px" : "100vh", right: open ? 0 : undefined, top: 0, bottom: 0 }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
         <div className="p-4">
             <div className="flex gap-4 items-center" style={{ flexDirection: isMobile ? open ? "row" : "row" : "column", alignItems: isMobile ? 'center' : open ? "start" : "center" }}>
                 <FontAwesomeIcon icon={faBars} className="cursor-pointer m-1 " onClick={() => setOpen(!open)}></FontAwesomeIcon>

@@ -5,7 +5,7 @@ import Footer from './footer'
 import { Container, useMediaQuery } from '@mui/material'
 
 export default function View({ children }: { children: ReactNode }) {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const isMobile = useMediaQuery("(max-width:640px)")
     useEffect(() => {
         if (isMobile) {
