@@ -1,6 +1,6 @@
 "use client"
 
-import { IconDefinition, faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { IconDefinition, faGithub, faInstagram, faLinkedin, faGlobe } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Container } from "@mui/material"
 import sdLight from "@/assets/logos/sd/light.png"
@@ -33,51 +33,48 @@ const aboutItems = [
 
 const cardItems: CardItem[] = [
     {
-        photo: 'https://imgs.search.brave.com/AOHPYtc-nxMtVikm6okEDNtpYb60nRxcZ5Jw_v5k8ac/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/bWlsaW5nLXdvbWFu/XzExNDktMjg1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn', name: 'Devi R', designation: 'Club Advisor', about: 'Assistant Professor', socials: [
-            { icon: faGithub, href: 'www.github.com' },
-            { icon: faLinkedin, href: 'www.linkedIn.com' },
-            { icon: faInstagram, href: 'www.instagram.com' }
+        photo: 'https://codingclubgct.vercel.app/static/media/devimam.de4f6ac3d010ff4d26f7.jpg', name: 'Devi R', designation: 'Club Advisor', about: 'Assistant Professor', socials: [
+            { icon: faLinkedin, href: 'https://www.linkedin.com/in/devi-r-b659a6122/' }
 
         ], domains: [], rollNo: ''
     },
     {
-        photo: 'https://imgs.search.brave.com/AOHPYtc-nxMtVikm6okEDNtpYb60nRxcZ5Jw_v5k8ac/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/bWlsaW5nLXdvbWFu/XzExNDktMjg1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn', name: 'Adithya R', designation: 'President', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: 'https://codingclubgct.vercel.app/static/media/adithya.b3fac93169d81bf45536.jpg', name: 'Adithya R', designation: 'President', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faGithub, href: 'www.github.com' },
-            { icon: faLinkedin, href: 'www.linkedIn.com' },
+            { icon: faLinkedin, href: 'https://www.linkedin.com/in/sakthisaravanan-v/' },
             { icon: faInstagram, href: 'www.instagram.com' }
 
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2017102'
     },
     {
-        photo: 'https://imgs.search.brave.com/AOHPYtc-nxMtVikm6okEDNtpYb60nRxcZ5Jw_v5k8ac/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/bWlsaW5nLXdvbWFu/XzExNDktMjg1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn', name: 'Joel Samuel Raj A', designation: 'Secretary', about: 'Lorem ipsum dolor sit amet.', socials: [
-            { icon: faGithub, href: 'www.github.com' },
-            { icon: faLinkedin, href: 'www.linkedIn.com' },
-            { icon: faInstagram, href: 'www.instagram.com' }
+        photo: 'https://codingclubgct.vercel.app/static/media/joel.60124b05d876a4ed52e9.jpeg', name: 'Joel Samuel Raj A', designation: 'Secretary', about: 'Lorem ipsum dolor sit amet.', socials: [
+            { icon: faGithub, href: 'https://github.com/useEffects' },
+            { icon: faLinkedin, href: 'https://www.linkedin.com/in/joel-samuel-369355206' },
+            { icon: faInstagram, href: 'https://www.instagram.com/_joel.24samuel' }
 
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018119'
     },
     {
-        photo: 'https://imgs.search.brave.com/AOHPYtc-nxMtVikm6okEDNtpYb60nRxcZ5Jw_v5k8ac/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/bWlsaW5nLXdvbWFu/XzExNDktMjg1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn', name: 'Jeremy Ashirwad P', designation: 'Treasurer', about: 'Lorem ipsum dolor sit amet.', socials: [
-            { icon: faGithub, href: 'www.github.com' },
-            { icon: faLinkedin, href: 'www.linkedIn.com' },
-            { icon: faInstagram, href: 'www.instagram.com' }
+        photo: 'https://codingclubgct.vercel.app/static/media/jeremy.f025d2330a17036bdff9.jpeg', name: 'Jeremy Ashirwad P', designation: 'Treasurer', about: 'Lorem ipsum dolor sit amet.', socials: [
+            { icon: faGithub, href: 'https://github.com/jeremyasirwaad' },
+            { icon: faLinkedin, href: 'https://www.linkedin.com/in/jeremy-asirwaad-182b93192' },
+            { icon: faInstagram, href: 'https://www.instagram.com/..jeremy._' }
 
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018118'
     },
     {
-        photo: 'https://imgs.search.brave.com/AOHPYtc-nxMtVikm6okEDNtpYb60nRxcZ5Jw_v5k8ac/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/bWlsaW5nLXdvbWFu/XzExNDktMjg1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn', name: 'Noufal Rahman', designation: 'Web Developement Lead', about: 'Lorem ipsum dolor sit amet.', socials: [
-            { icon: faGithub, href: 'www.github.com' },
-            { icon: faLinkedin, href: 'www.linkedIn.com' },
-            { icon: faInstagram, href: 'www.instagram.com' }
+        photo: 'https://avatars.githubusercontent.com/u/50796694', name: 'Noufal Rahman', designation: 'Web Developement Lead', about: 'Lorem ipsum dolor sit amet.', socials: [
+            { icon: faGithub, href: 'https://github.com/iamnoufal' },
+            { icon: faLinkedin, href: 'https://linkedIn.com/in/iamnoufal' },
+            { icon: faInstagram, href: 'https://instagram.com/_iam_noufal' },
+            { icon: faGlobe, href: "https://noufal.dev" }
 
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2017313'
     },
     {
-        photo: 'https://imgs.search.brave.com/AOHPYtc-nxMtVikm6okEDNtpYb60nRxcZ5Jw_v5k8ac/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/bWlsaW5nLXdvbWFu/XzExNDktMjg1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn', name: 'Harithaa s', designation: 'Operations and HR lead', about: 'Lorem ipsum dolor sit amet.', socials: [
-            { icon: faGithub, href: 'www.github.com' },
-            { icon: faLinkedin, href: 'www.linkedIn.com' },
-            { icon: faInstagram, href: 'www.instagram.com' }
-
+        photo: '', name: 'Harithaa s', designation: 'Operations and HR lead', about: 'Lorem ipsum dolor sit amet.', socials: [
+            { icon: faLinkedin, href: 'https://www.linkedin.com/in/harithaa-s-665a78201' },
+            { icon: faInstagram, href: 'https://www.instagram.com/_.hari.thaa._/' }
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018116'
     }
 ]
