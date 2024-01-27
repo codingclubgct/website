@@ -5,6 +5,7 @@
 @tailwind utilities;
 * {
     font-family: 'Poppins' !important;
+    transition: all 0.3s ease-in-out;
    
 }
 p,
