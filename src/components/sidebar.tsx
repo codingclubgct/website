@@ -57,7 +57,7 @@ export default function Sidebar({ open, setOpen }: { open: boolean, setOpen: Dis
                 </div>}
             </div>
         </div>
-        {!isMobile && <div className="flex p-4 items-center justify-center"><DarkModeSwitcher /></div>}
+        {!isMobile && <div className="flex p-4 items-center justify-start"><DarkModeSwitcher /></div>}
         {/* <Divider style={{ height: "100%" }} orientation="vertical" /> */}
     </div>
 }

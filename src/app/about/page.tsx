@@ -13,6 +13,13 @@ import ogDark from "@/assets/logos/og/dark.png"
 import { useContext } from "react"
 import { DarkModeContext } from "@/context/darkmode"
 
+import devimam from "@/assets/team/devimam.webp"
+import adithya from "@/assets/team/adithya.webp"
+import joel from "@/assets/team/joel.webp"
+import jeremy from "@/assets/team/jeremy.webp"
+import noufal from "@/assets/team/noufal.webp"
+import harithaa from "@/assets/team/harithaa.webp"
+
 type CardItem = { photo: string, name: string, designation: string, about: string, socials: { icon: IconDefinition, href: string }[], domains: string[], rollNo: string }
 
 
@@ -34,13 +41,13 @@ const aboutItems = [
 
 const cardItems: CardItem[] = [
     {
-        photo: 'https://codingclubgct.vercel.app/static/media/devimam.de4f6ac3d010ff4d26f7.jpg', name: 'Devi R', designation: 'Club Advisor', about: 'Assistant Professor', socials: [
+        photo: devimam.src, name: 'Devi R', designation: 'Club Advisor', about: 'Assistant Professor', socials: [
             { icon: faLinkedin, href: 'https://www.linkedin.com/in/devi-r-b659a6122/' }
 
         ], domains: [], rollNo: ''
     },
     {
-        photo: 'https://codingclubgct.vercel.app/static/media/adithya.b3fac93169d81bf45536.jpg', name: 'Adithya R', designation: 'President', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: adithya.src, name: 'Adithya R', designation: 'President', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faGithub, href: 'www.github.com' },
             { icon: faLinkedin, href: 'https://www.linkedin.com/in/sakthisaravanan-v/' },
             { icon: faInstagram, href: 'www.instagram.com' }
@@ -48,7 +55,7 @@ const cardItems: CardItem[] = [
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2017102'
     },
     {
-        photo: 'https://codingclubgct.vercel.app/static/media/joel.60124b05d876a4ed52e9.jpeg', name: 'Joel Samuel Raj A', designation: 'Secretary', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: joel.src, name: 'Joel Samuel Raj A', designation: 'Secretary', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faGithub, href: 'https://github.com/useEffects' },
             { icon: faLinkedin, href: 'https://www.linkedin.com/in/joel-samuel-369355206' },
             { icon: faInstagram, href: 'https://www.instagram.com/_joel.24samuel' }
@@ -56,7 +63,7 @@ const cardItems: CardItem[] = [
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018119'
     },
     {
-        photo: 'https://codingclubgct.vercel.app/static/media/jeremy.f025d2330a17036bdff9.jpeg', name: 'Jeremy Ashirwad P', designation: 'Treasurer', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: jeremy.src, name: 'Jeremy Ashirwad P', designation: 'Treasurer', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faGithub, href: 'https://github.com/jeremyasirwaad' },
             { icon: faLinkedin, href: 'https://www.linkedin.com/in/jeremy-asirwaad-182b93192' },
             { icon: faInstagram, href: 'https://www.instagram.com/..jeremy._' }
@@ -64,16 +71,16 @@ const cardItems: CardItem[] = [
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018118'
     },
     {
-        photo: 'https://avatars.githubusercontent.com/u/50796694', name: 'Noufal Rahman', designation: 'Web Developement Lead', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: noufal.src, name: 'Noufal Rahman', designation: 'Web Developement Lead', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faGithub, href: 'https://github.com/iamnoufal' },
             { icon: faLinkedin, href: 'https://linkedIn.com/in/iamnoufal' },
             { icon: faInstagram, href: 'https://instagram.com/_iam_noufal' },
             { icon: faGlobe, href: "https://noufal.dev" }
 
-        ], domains: ['fullStack', 'Software Engineering'], rollNo: '2017313'
+        ], domains: ['Developer', 'Engineer'], rollNo: '2017313'
     },
     {
-        photo: '', name: 'Harithaa S', designation: 'Operations and HR lead', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: harithaa.src, name: 'Harithaa S', designation: 'Operations and HR lead', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faLinkedin, href: 'https://www.linkedin.com/in/harithaa-s-665a78201' },
             { icon: faInstagram, href: 'https://www.instagram.com/_.hari.thaa._/' }
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018116'
