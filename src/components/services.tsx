@@ -21,7 +21,7 @@ const service = [
         photo: app
     },
     {
-        name: 'Ai Engineering ',
+        name: 'AI Engineering ',
         photo: ai
     },
     {
@@ -84,7 +84,7 @@ export default function Services() {
                             className={classnames(
                                 "relative cursor-pointer md:h-full h-[10%] md:w-[10%] first:h-[5%] md:first:h-full md:last:h-full last:h-[5%] md:first:w-[5%] md:last:w-[5%] md:[&[aria-current='true']]:w-[60%] [&[aria-current='true']]:h-[60%] md:[&[aria-current='true']]:h-full",
                                 "md:[transition:width_var(--transition,200ms_ease-in)]",
-                                "md:before-block before:absolute before:bottom-0 before:left-[-10px] before:right-[-10px] before:top-0 before:hidden before:bg-white",
+                                "md:before-block before:absolute before:bottom-0 before:left-[-10px] before:right-[-10px] before:top-0 before:hidden",
                                 "md:[&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-[7%] md:hover:w-[12%] list-none", {"transition-[height]": isMobile}
                             )}
                             key={i}
@@ -97,10 +97,10 @@ export default function Services() {
                                 />
                                 <div
                                     className={classnames(
-                                        "via-transparent left-0 top-0 bottom-0 right-0 transition-[transform,opacity] absolute bg-gradient-to-t from-black to-transparent z-10 flex items-end p-4", { "before:content-[''] before:top-0 before:left-0 before:right-0 before:bottom-0 before:absolute before:bg-base before:bg-opacity-90": activeItem !== i }
+                                        "via-transparent left-0 top-0 bottom-0 right-0 transition-[transform,opacity] absolute bg-gradient-to-t from-mantle to-transparent z-10 flex items-end p-4", { "before:content-[''] before:top-0 before:left-0 before:right-0 before:bottom-0 before:absolute before:bg-base before:bg-opacity-80": activeItem !== i }
                                     )}
                                 >
-                                    <p className=" text-white text-lg font-bold md:text-4xl" style={{ opacity: activeItem === i ? "100%" : "0%" }}>{item.name}</p>
+                                    <p className="text-lg font-bold md:text-2xl" style={{ opacity: activeItem === i ? "100%" : "0%" }}>{item.name}</p>
 
                                 </div>
                             </div>
