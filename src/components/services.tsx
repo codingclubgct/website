@@ -13,11 +13,11 @@ import { useMediaQuery } from '@mui/material'
 
 const service = [
     {
-        name: 'FullStack Developement ',
+        name: 'FullStack Development ',
         photo: fullstack
     },
     {
-        name: 'App Developement ',
+        name: 'App Development ',
         photo: app
     },
     {
@@ -25,7 +25,7 @@ const service = [
         photo: ai
     },
     {
-        name: 'Software Developement ',
+        name: 'Software Development ',
         photo: software
     },
     {

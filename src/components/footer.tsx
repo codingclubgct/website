@@ -64,10 +64,10 @@ export default function Footer() {
                 <div>
                     <p className='my-4  font-bold'>Domains</p>
                     <div className='flex flex-col gap-2 text-sm text-subtext0'>
-                        <p>Fullstack Developement</p>
-                        <p>App Developement</p>
+                        <p>Fullstack Development</p>
+                        <p>App Development</p>
                         <p>Ai Engineering</p>
-                        <p>Software Developement</p>
+                        <p>Software Development</p>
                         <p>Network Engineering</p>
                     </div>
                 </div>

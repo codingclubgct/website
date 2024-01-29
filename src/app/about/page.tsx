@@ -26,7 +26,7 @@ type CardItem = { photo: string, name: string, designation: string, about: strin
 const aboutItems = [
     {
         photos: { light: sdLight, dark: sdDark },
-        title: 'Software Developement', content: 'Fueled by innovation, dynamic applications tailored to user needs are specialized in by our team.Through continuous exploration and adaptability, it is ensured that our applications remain ahead of the curve in the rapidly changing digital landscape, providing users with cutting-edge and relevant experiences.'
+        title: 'Software Development', content: 'Fueled by innovation, dynamic applications tailored to user needs are specialized in by our team.Through continuous exploration and adaptability, it is ensured that our applications remain ahead of the curve in the rapidly changing digital landscape, providing users with cutting-edge and relevant experiences.'
     },
     {
         photos: { light: hrLight, dark: hrDark },
