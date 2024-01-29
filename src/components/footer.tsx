@@ -57,7 +57,7 @@ const teamMembers : CardItem[] = [
         ], domains: ['fullStack', 'Software Engineering'], rollNo: '2018119'
     },
     {
-        photo: noufal.src, name: 'Noufal Rahman', designation: 'Web Developement Lead', about: 'Lorem ipsum dolor sit amet.', socials: [
+        photo: noufal.src, name: 'Noufal Rahman', designation: 'Web Development Lead', about: 'Lorem ipsum dolor sit amet.', socials: [
             { icon: faGithub, href: 'https://github.com/iamnoufal' },
             { icon: faLinkedin, href: 'https://linkedIn.com/in/iamnoufal' },
             { icon: faInstagram, href: 'https://instagram.com/_iam_noufal' },
