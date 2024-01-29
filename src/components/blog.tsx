@@ -141,7 +141,7 @@ export default function Blog() {
                             <p className="p-1">{blogItem.githubData.author.name}</p>
                             <div className="flex justify-evenly gap-8 m-2">
                                 {blogItem.githubData.author.blog && <div className="flex bg-mantle text-pink cursor-pointer gap-1">
-                                    <a href={blogItem.githubData.author.blog} className="no-underline bg-mantle text-pink">Blog</a>
+                                    <a href={blogItem.githubData.author.blog} className="no-underline bg-mantle text-pink">Website</a>
                                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-4 w-4 ml-2 mt-[3px]"></FontAwesomeIcon>
                                 </div>}
                                 <div className="flex bg-mantle text-yellow cursor-pointer rounded gap-1">
@@ -160,7 +160,7 @@ export default function Blog() {
                     </div>
 
                     <div className="flex  m-2">
-                        <a href={`https://blogs.codingclubgct.in/${blogItem.url}`} className="text-blue no-underline">Read Now</a>
+                        <a href={`https://blogs.codingclubgct.in/${blogItem.url}`} target={"_blank"} className="text-blue no-underline">Read Now</a>
 
                     </div>
                 </div>

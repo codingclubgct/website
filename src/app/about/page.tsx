@@ -2,7 +2,6 @@
 
 import { IconDefinition, faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Container } from "@mui/material"
 import sdLight from "@/assets/logos/sd/light.png"
 import sdDark from "@/assets/logos/sd/dark.png"
@@ -19,9 +18,9 @@ import joel from "@/assets/team/joel.webp"
 import jeremy from "@/assets/team/jeremy.webp"
 import noufal from "@/assets/team/noufal.webp"
 import harithaa from "@/assets/team/harithaa.webp"
+import ProfileCard from "@/components/profile"
 
 type CardItem = { photo: string, name: string, designation: string, about: string, socials: { icon: IconDefinition, href: string }[], domains: string[], rollNo: string }
-
 
 const aboutItems = [
     {
@@ -87,25 +86,6 @@ const cardItems: CardItem[] = [
     }
 ]
 
-function Card(props: CardItem) {
-    return <div className="flex flex-col px-4 py-8 w-full justify-around items-center bg-mantle rounded h-[350px]">
-        <img src={props.photo} className="w-20 object-contain rounded-full"></img>
-        <p className="font-bold">{props.name}</p>
-        <p className="text-yellow">{props.designation}</p>
-        <p>{props.rollNo}</p>
-        <p>{props.about}</p>
-        <div className="flex gap-4">
-            {props.domains.map((domain, i) => <span key={i} className="bg-crust rounded px-2 py-1 text-sm text-subtext0">{domain}</span>)}
-        </div>
-        <div className="flex gap-4">
-            {props.socials.map((social, j) => <a href={social.href} key={j}><FontAwesomeIcon icon={social.icon} className="w-4 h-4 text-text"></FontAwesomeIcon>
-            </a>)}
-        </div>
-
-
-    </div>
-}
-
 export default function Page() {
     const { darkMode } = useContext(DarkModeContext)
     return <div>
@@ -129,7 +109,7 @@ export default function Page() {
                 </div>
                 <div className="md:grid grid-rows-2 grid-cols-3 w-full gap-4">
                     {cardItems.map((item, i) => <div key={i} className="w-full my-4 md:my-0 ">
-                        <Card {...item} />
+                        <ProfileCard {...item} />
                     </div>)}
                 </div>
             </Container>
