@@ -32,7 +32,7 @@ async function getIssueNumber(title: string) {
                 "Content-Type": "application/json"
             }
         }).then(res => res.json())
-        if (id === 80976002) {
+        if (id === 116782181) {
             const resp: Issue = await fetch("https://api.github.com/repos/coding-club-gct/blogs/issues", {
                 method: "POST",
                 headers: {

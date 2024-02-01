@@ -9,6 +9,26 @@ import View from "@/views/view";
 import { allBlogs } from "contentlayer/generated";
 import "./global.css";
 import "./tailwind.css";
+import { Metadata } from "next";
+
+export const metadata : Metadata = {
+  metadataBase: new URL("https://blog.codingclubgct.in"),
+  title: "Blog | Coding Club of GCT",
+  description: 'A club exclusively for coding. Here we practice and participate in programming competitions, solving real-world problems. Develop applications, providing tech support to our college and working on open source contributions.',
+  icons: ["/favicon.ico", '/favicon-16x16.png', '/favicon-32x32.png', '/apple-touch-icon.png'],
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://blog.codingclubgct.in',
+    siteName: 'Blog | Coding Club of GCT',
+    title: 'Blog | Coding Club of GCT',
+    description: 'A club exclusively for coding. Here we practice and participate in programming competitions, solving real-world problems. Develop applications, providing tech support to our college and working on open source contributions.',
+  },
+  twitter: {
+    title: 'Blog | Coding Club of GCT',
+    description: 'A club exclusively for coding. Here we practice and participate in programming competitions, solving real-world problems. Develop applications, providing tech support to our college and working on open source contributions.',
+  }
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
