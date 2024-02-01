@@ -1,3 +1,2 @@
-export * from "./mui"
+export * from "./color-schemes"
 export * from "./tailwind"
-export * from "./catppuccin"

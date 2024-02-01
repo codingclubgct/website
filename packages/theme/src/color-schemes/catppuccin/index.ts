@@ -1,8 +1,7 @@
-import { variants, labels, Color, AlphaColor, Labels } from "@catppuccin/palette";
+import { AlphaColor, Color, Labels, labels, variants } from "@catppuccin/palette";
+import { ColorScheme } from "..";
 
-type CatppuccinColors = {
-  [key in "light" | "dark"]: { [K in keyof typeof labels]: string };
-};
+interface CatppuccinColors extends ColorScheme<{ [K in keyof typeof labels]: string }> { }
 
 export const catppuccinColors = Object.entries(variants)
   .reduce<{ themeName: string; themeDetails: Labels<Color, AlphaColor> }[]>((themes, [themeName, themeDetails]) => {

@@ -1,19 +1,21 @@
-import { Config } from "tailwindcss";
-import { catppuccinColors } from "../catppuccin";
+import typography from "@tailwindcss/typography";
 import { createThemes } from "tw-colors";
-import typography from "@tailwindcss/typography"
+import { ColorScheme } from "../color-schemes";
+import { Config } from "tailwindcss";
 
-export const tailwindConfig: Config = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./src/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
-  important: "#__next",
-  corePlugins: {
-    preflight: false
-  },
-  plugins: [
-    createThemes({
-      light: catppuccinColors.light,
-      dark: catppuccinColors.dark
-    }),
-    typography
-  ],
-};
+export const generateTailwindConfig = <T>(colorScheme: ColorScheme<T>) => {
+  return {
+    content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./src/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+    important: "#__next",
+    corePlugins: {
+      preflight: false
+    },
+    plugins: [
+      createThemes({
+        light: colorScheme.light,
+        dark: colorScheme.dark
+      }),
+      typography
+    ],
+  } as Config;
+}

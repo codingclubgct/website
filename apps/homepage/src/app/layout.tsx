@@ -6,7 +6,6 @@ import View from "@/components/view"
 import { OpenProvider } from "@/context/open";
 import SessionProvider from "@/components/session";
 import { Metadata } from "next";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 export const metadata : Metadata = {
   metadataBase: new URL("https://codingclubgct.in"),
@@ -37,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <CatppuccinProvider>
                 <OpenProvider>
                   <View>
-                    <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+                    {children}
                   </View>
                 </OpenProvider>
               </CatppuccinProvider>

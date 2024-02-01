@@ -1,6 +1,6 @@
 {
   "name": "@coding-club-gct/theme",
-  "version": "1.2.1",
+  "version": "2.0.2",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -19,6 +19,7 @@
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@mui/material": "5.14.13",
+    "@rose-pine/palette": "^4.0.1",
     "colorsea": "^1.2.1",
     "framer-motion": "^10.13.0",
     "react": "^18.2.0",

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coding-club-gct/theme": "workspace:*",
     "@contentlayer/source-files": "^0.3.4",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
@@ -24,6 +25,7 @@
     "@octokit/types": "^12.4.0",
     "@types/mdx": "^2.0.10",
     "@uiw/react-md-editor": "^4.0.3",
+    "colorsea": "^1.2.1",
     "contentlayer": "^0.3.4",
     "directory-tree": "^3.5.1",
     "github-slugger": "^2.0.0",
@@ -43,8 +45,7 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.0",
     "use-local-storage": "^3.0.0",
-    "use-local-storage-state": "^19.1.0",
-    "@coding-club-gct/theme": "workspace:*"
+    "use-local-storage-state": "^19.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

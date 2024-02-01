@@ -1,4 +1,4 @@
-import { tailwindConfig } from '@coding-club-gct/theme/src'
+import { catppuccinColors, generateTailwindConfig } from "@coding-club-gct/theme/src"
 
-const config = tailwindConfig
+const config = generateTailwindConfig(catppuccinColors)
 export default config
