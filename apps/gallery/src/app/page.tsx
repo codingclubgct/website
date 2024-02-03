@@ -26,7 +26,7 @@ const Items = [
 export default function Home() {
   return <div>
     <Header /> 
-    <div className="relative bg-black " >
+    <div className="relative bg-mantle " >
       <img src={clg.src} alt="try later" className="w-full opacity-50"></img>
     
       <div className="absolute text-4xl mt-24 ml-24 mr-24 mb-1" style={{top: "16px" ,left: "16px", bottom:"16px",right:"16px"}}>
@@ -38,7 +38,7 @@ export default function Home() {
          Sapiente eaque sequi quasi libero iste explicabo, saepe quis. Rerum distinctio explicabo harum.</p>
       </div>
     </div>
-    <div className="flex flex-col">
+    {/* <div className="flex flex-col">
         <p className="text-4xl p-8 font-medium">RECENT EVENTS</p>
       <div className=" grid grid-rows-2 grid-cols-2 p-4 gap-4">
         {
@@ -149,7 +149,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+      <Footer /> */}
+    {/* </div> */}
   </div>
 }

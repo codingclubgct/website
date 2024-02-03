@@ -1,18 +1,23 @@
 import logo from '@/assests/codingclublogo.png'
-import { Button } from '@mui/material'
-export default  function Header(){
-    return <div className='flex gap-16 w-full bg-white p-4'>
-      <div className='flex w-2/5 '>
-       <img src={logo.src} alt="try later" className='w-24' ></img>  
-       <p className='text-4xl m-4'>CODING CLUB OF GCT</p>
-      </div>
-      <div className='flex  justify-between  p-4  w-3/5'>
-        <p className='text-2xl'>Home</p> 
-        <p className='text-2xl'>About</p>
-        <p className='text-2xl'>Department</p>
-        <p className='text-2xl'>Contact us</p>
-      </div>
+import { Button, Divider } from '@mui/material'
+import DarkModeSwitcher from './darkmodeswitcher'
 
+const navItems = [
+  { label: "Home Page", href: "https://codingclubgct.in" },
+  { label: "blogs", href: "https://blogs.codingclubgct.in" }
+]
+
+
+export default function Header() {
+  return <div>
+    <div className='flex items-center p-4'>
+
+      <DarkModeSwitcher></DarkModeSwitcher>
+      <div className='flex gap-4 w-full justify-end'>
+        {navItems.map((navItem, i) => <div key={i}><a href={navItem.href} className='text-blue no-underline'>{navItem.label}</a></div>)}
+      </div>
     </div>
-  
+    <Divider></Divider>
+  </div>
+
 }
