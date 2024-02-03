@@ -12,3 +12,6 @@ a,
 span {
     @apply my-0 py-0
 }
+body{
+    @apply bg-base !important
+}
