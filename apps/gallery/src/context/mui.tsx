@@ -2,7 +2,8 @@
 
 import { ReactNode, createContext, useContext, useMemo } from "react";
 import { ThemeProvider as MuiThemeProvider, ThemeOptions } from "@mui/material/styles";
-import { CssBaseline, Shadows, Theme } from "@mui/material";
+import {  Shadows, Theme } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme } from "@mui/material/styles";
 import { DarkModeContext } from "./darkmode";
 import { catppuccinColors } from "@coding-club-gct/theme/src";
