@@ -2,7 +2,7 @@
 
 import { ReactNode, createContext, useContext, useMemo } from "react";
 import { DarkModeContext } from "./darkmode";
-import { catppuccinColors } from "../theme/src";
+import { catppuccinColors } from "@coding-club-gct/theme/src";
 
 export const CatppuccinContext = createContext(catppuccinColors.dark);
 export function CatppuccinProvider({ children }: { children: ReactNode }) {
