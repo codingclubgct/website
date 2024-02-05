@@ -1,18 +1,21 @@
 "use client"
 
 import cover from "@/assests/img.png";
-import { Avatar, AvatarGroup, Button, Container } from "@mui/material";
+import { Avatar, AvatarGroup, Button, Container, Divider } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faInstagram, faYoutube, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight, faBookmark, faComment, faEnvelope, faHeart, faSave, faTag, faUpload } from "@fortawesome/free-solid-svg-icons"
 import Header from "@/components/header"
 import { team } from "@/lib/team"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DarkModeContext } from "@/context/darkmode";
 import { CatppuccinContext } from "@/context/catppuccin";
 import { events } from "@/lib/events"
 import Link from "next/link";
 import { InstagramEmbed } from 'react-social-media-embed';
+import ccdark from "@/assests/codingclub/dark.png"
+import cclight from "@/assests/codingclub/light.png"
+import cartoon from "@/assests/cartoon.jpg"
 
 const items = [
   {
@@ -45,13 +48,23 @@ const quickLinkItems = [
 ]
 
 
+
 export default function Home() {
+  const [count, setCount] = useState<number | null>(null)
   const { darkMode } = useContext(DarkModeContext)
   const [current, setCurrent] = useState(team[0])
   const catppuccinColors = useContext(CatppuccinContext)
 
+  useEffect(() => {
+    async function fetchMemberCount() { 
+      const resp = await fetch("https://codingclubgct.in/api/discord/members").then(res=>res.json())
+      setCount(resp.approximate_member_count)
+    }
+    fetchMemberCount()
+  }, [])
+
   return <div>
-    {/* <Header /> */}
+    <Header />
     <div className="">
       <Container className="flex gap-2 p-4 h-[850px]">
         <div className="w-1/4 h-full flex flex-col gap-2">
@@ -89,7 +102,9 @@ export default function Home() {
                 <img className="h-4/5 object-contain" src={darkMode ? "/dark.png" : "/light.png"} alt="" />
                 <p className="text-subtext0 text-lg text-center"> Lorem ipsum dolor sit amet. </p>
               </div>
-              <div className="w-1/2 bg-crust rounded-tl-xl rounded-tr-xl h-full">
+              <div className="w-1/2 bg-crust rounded-tl-xl rounded-tr-xl h-full flex flex-col p-4 justify-evenly">
+                <p className="text-3xl text-subtext0">Maintaining</p>
+                <p className="text-4xl font-bold">{count}+<span className="text-xl font-normal">members</span></p>
               </div>
             </div>
             <div className="bg-crust rounded-xl rounded-tr-none h-[calc(100%-300px)] p-4">
@@ -100,7 +115,36 @@ export default function Home() {
         <div className="w-[calc(328px+2rem)] flex flex-col h-full justify-evenly">
           <div className="w-full h-[calc(100%-100px-1rem)] flex flex-col gap-4 bg-mantle p-4 rounded-xl">
             <p className="text-3xl"> Follow us on Instagram </p>
-            <InstagramEmbed url="https://www.instagram.com/p/CUbHfhpswxt" />
+            <div className="bg-base h-full w-full flex flex-col justify-evenly ">
+              <div className="flex gap-4 items-center p-2" >
+                <img src={darkMode ? ccdark.src : cclight.src} alt="try later" className="rounded-full w-8 h-8"></img>
+                <div className="flex flex-col">
+                  <p>codingclub.gct</p>
+                  <p className="text-subtext0 text-sm">Follow us</p>
+                </div>
+                <a href="" className="text-blue"><Button className="text-sm "  >View Profile</Button></a>
+              </div>
+              <div >
+                <img src={cartoon.src} className="w-full object-contain"></img>
+              </div>
+              <a className="p-2 text-blue">View more on Instagram</a>
+              <Divider></Divider>
+              <div className="flex justify-between px-4" >
+                <div className="flex  gap-4 " >
+                  <a href=" "><FontAwesomeIcon icon={faHeart} className="w-6 h-6"></FontAwesomeIcon></a>
+                  <a href="  "><FontAwesomeIcon icon={faComment} className="w-6 h-6"></FontAwesomeIcon></a>
+                  <a href=" "><FontAwesomeIcon icon={faUpload} className="w-6 h-6"></FontAwesomeIcon></a>
+                </div>
+                <div className="flex ">
+                  <a href=" "><FontAwesomeIcon icon={faBookmark} className="w-6 h-6"></FontAwesomeIcon></a>
+                </div>
+              </div>
+              <Divider></Divider>
+              <div className="flex px-4 justify-between ">
+                <p>add a comment</p>
+                <a href=" "><FontAwesomeIcon icon={faInstagram} className="w-6 h-6"></FontAwesomeIcon></a>
+              </div>
+            </div>
           </div>
           <div className="flex flex-col gap-2 h-[100px] w-full p-4 bg-crust rounded-xl">
             <div className="flex justify-between items-center">
