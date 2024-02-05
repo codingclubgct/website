@@ -161,21 +161,21 @@ export default function Home() {
           <p className="text-3xl">Meet Our Team</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, pariatur.</p>
         </div>
-        <div className="flex ">
-          <div className="w-1/2 flex flex-col gap-4">
-            {team.map((item, i) => <div onClick={() => setCurrent(item)} key={i} className="flex  bg-mantle p-8 rounded-xl ">
-              <div className="w-2/3 flex flex-col gap-8">
-                <p className="text-lg">{item.name}</p>
-                <p className="text-lg">{item.roll}</p>
-                <p className="text-lg text-red">{item.designation}</p>
+        <div className="flex h-[500px]">
+          <div className="w-1/2 flex flex-col gap-4 overflow-y-scroll h-[500px]">
+            {team.map((item, i) => <div onClick={() => setCurrent(item)} key={i} className="flex  bg-mantle p-8 rounded-xl h-[500px]">
+              <div className="w-2/3 flex flex-col justify-evenly h-[500px]">
+                <p className="text-6xl font-bold">{item.name}</p>
+                <p className="text-3xl">{item.roll}</p>
+                <p className="text-3xl text-pink">{item.designation}</p>
               </div>
               <div className="w-1/3 h-full flex justify-center items-center">
                 <FontAwesomeIcon icon={faArrowRight} style={{ color: current.roll === item.roll ? catppuccinColors.mauve : catppuccinColors.text }} className="w-24 h-24"></FontAwesomeIcon>
               </div>
             </div>)}
           </div>
-          <div className="w-1/2">
-            <img src={current.photo} className="w-full object-contain"></img>
+          <div className="w-1/2 ">
+            <img src={current.photo} className="w-full object-contain h-full"></img>
           </div>
         </div>
       </div>
