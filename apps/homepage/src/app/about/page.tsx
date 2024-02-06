@@ -100,7 +100,7 @@ export default function Page() {
                     </div>)}
                 </div>
             </Container>
-        Container</div>
+        </div>
         <div >
             <Container className="flex flex-col gap-4">
                 <div className="flex flex-col gap-4 my-12">
