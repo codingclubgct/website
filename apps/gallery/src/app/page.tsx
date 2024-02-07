@@ -102,22 +102,22 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="p-4 gap-4">
+      <div className="p-4 md:gap-4 gap-2 ">
         <p className="text-3xl p-4 "> Operation and HR team</p>
         <Divider></Divider>
         <div className="flex flex-col md:flex-row w-full">
-          <div className="w-1/2 p-20 ">
-            <div className="flex h-[600px] gap-6">
+          <div className="md:w-1/2 md:p-20  p-4">
+            <div className="flex md:h-[600px] object-contain md:gap-6 ">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci assumenda iure ad neque nobis repudiandae officia magnam in commodi, esse ab deleniti nulla ea voluptates sed nemo expedita quod necessitatibus voluptatem, sequi suscipit placeat fugit perferendis? Quas quisquam minima temporibus sapiente repellendus ducimus dolorem libero quidem, voluptatum dolor nesciunt veniam.</p>
               <Divider orientation="vertical" className=" h-0  md:h-full "></Divider>
             </div>
           </div >
-          <div className="w-1/2">
+          <div className="md:w-1/2 ">
             {serviceItems.map((item, i) => <div className="flex ">
-              <div className="p-8">
+              <div className="md:p-8 p-2">
                 <FontAwesomeIcon icon={item.icon} className="h-16 w-16 text-pink justify-center my-2" ></FontAwesomeIcon>
               </div>
-              <div className="flex flex-col mt-8 gap-4 ml-8">
+              <div className="flex flex-col md:mt-8 mt-0 md:gap-4 ml-8">
                 <p className="text-2xl p-2 text-pink">{item.heading}</p>
                 <p className="text-subtext0  p-2">{item.content}</p>
                 <Divider className=""></Divider>
@@ -128,9 +128,9 @@ export default function Home() {
         </div>
       </div>
       <div className="">
-        <div className="flex gap-2 p-4 h-[850px]">
-          <div className="w-1/4 h-full flex flex-col gap-2">
-            <div className="w-full h-[300px] bg-crust rounded-xl justify-between p-4 flex flex-col">
+        <div className="md:flex  gap-2 p-4 md:h-[850px] object-contain">
+          <div className="md:w-1/4  h-full flex flex-col gap-2">
+            <div className="w-full h-[300px] bg-crust rounded-xl justify-between md:p-4 p-2 flex flex-col">
               <p className="text-3xl"> Operations and HR Team </p>
               <p className="text-subtext0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, explicabo!</p>
               <AvatarGroup>
@@ -149,18 +149,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[45%] flex flex-col gap-2 h-full ">
-            <div className="w-full flex gap-2 h-[100px]">
-              <div className="w-2/3 rounded-xl bg-mantle flex items-center p-4 h-full">
+          <div className="md:w-[45%] flex flex-col gap-2 h-full my-2">
+            <div className="w-full md:flex gap-2 h-[100px]">
+              <div className="md:w-2/3 rounded-xl bg-mantle flex items-center p-4 h-full">
                 <img className="w-full object-contain" src={darkMode ? "/arrow_dark.png" : "arrow_light.png"} alt="" />
               </div>
-              <div className="w-1/3 rounded-xl p-4 bg-crust h-full flex items-center">
+              <div className="md:w-1/3 my-2 rounded-xl p-4 bg-crust h-full flex items-center">
                 <p className="text-lg text-center"> No Coding Required 😱😱😱 </p>
               </div>
             </div>
             <div className="w-full h-[calc(100%-100px-1rem)] rounded-xl">
-              <div className="flex gap-2 h-[300px] items-center">
-                <div className="w-1/2 flex flex-col justify-between items-center h-[calc(100%-0.5rem)] mb-2 bg-mantle rounded-xl p-4">
+              <div className="flex  gap-2 h-[300px] items-center">
+                <div className="w-1/2  flex flex-col justify-between items-center h-[calc(100%-0.5rem)] mb-2 bg-mantle rounded-xl p-4">
                   <img className="h-4/5 object-contain" src={darkMode ? "/dark.png" : "/light.png"} alt="" />
                   <p className="text-subtext0 text-lg text-center"> Lorem ipsum dolor sit amet. </p>
                 </div>
@@ -219,18 +219,18 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <div className="flex flex-col gap-4 mt-40 mb-4 p-4">
-          <p className="text-xl">MEET OUR TEAM</p>
+        <div className="flex flex-col gap-4 mt-30 mb-4 p-4  ">
+          <p className="text-2xl">MEET OUR TEAM</p>
           <p className="text-subtext0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, pariatur.</p>
           <Divider></Divider>
         </div>
-        <div className="flex p-8 gap-4 h-[600px]">
-          <div className="w-1/2 flex flex-col justify-center gap-8 h-full">
-            <p className="text-5xl font-bold uppercase"> {team[current].name} </p>
-            <p className="text-5xl font-bold"> {team[current].roll} </p>
-            <p className="text-5xl font-bold text-pink"> {team[current].designation} </p>
+        <div className="md:flex-row flex flex-col  p-8  gap-4 h-[600px] ">
+          <div className="md:w-1/2  flex flex-col justify-center gap-8 h-full  ">
+            <p className="md:text-5xl text-2xl font-bold uppercase"> {team[current].name} </p>
+            <p className="md:text-5xl text-2xl font-bold "> {team[current].roll} </p>
+            <p className="md:text-5xl text-2xl font-bold text-pink"> {team[current].designation} </p>
           </div>
-          <div className="w-1/2 h-full">
+          <div className="md:w-1/2 h-full ">
             <img src={team[current].photo} className="w-full object-contain h-full" alt="" />
           </div>
         </div>
@@ -238,17 +238,17 @@ export default function Home() {
           <MobileStepper className="bg-base text-text w-1/2" activeStep={current} variant="text" steps={team.length} position="static" nextButton={<FontAwesomeIcon icon={faArrowRight} className="cursor-pointer w-12 h-12 text-text" onClick={() => setCurrent(p => p === team.length - 1 ? 0 : p + 1)} />} backButton={<FontAwesomeIcon className="cursor-pointer w-12 h-12 text-text" icon={faArrowLeft} onClick={() => setCurrent(p => p === 0 ? team.length - 1 : p - 1)} />} />
         </div>
       </div>
-      <div className="w-full p-4 ">
+      <div className="md:w-full md:p-4 ">
         <Divider></Divider>
         <p className="text-4xl p-4">Recent Events</p>
         <Divider></Divider>
       </div>
-      <div className="grid grid-rows-2 grid-cols-2 gap-8 m-4 ">
+      <div className="grid grid-col-1 md:grid-cols-2 gap-8 m-4 ">
         {events.map((item, i) => <div key={i} >
           <div className="flex flex-col gap-8">
             <img src={item.photo} className=" h-[50vw]"></img>
             <div className="flex flex-col md:flex justify-around">
-              <p className="text-4xl">{item.name}</p>
+              <p className="md:text-4xl text-2xl">{item.name}</p>
               <Link href={item.slug}><Button>see more</Button></Link>
             </div>
           </div>
