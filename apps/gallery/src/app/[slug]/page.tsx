@@ -1,6 +1,5 @@
 "use client"
 import { events } from "@/lib/events"
-import { eventhead } from "@/lib/eventhead"
 import car from "@/assests/img.png"
 import { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -29,9 +28,7 @@ export default function Page({ params: { slug } }: { params: { slug: string } })
         </div>
       </div>
       <div>
-         {events.map(item=>item.eventheads.map(eventhead=><div key={i}>
-          <p>{eventhead.name}</p>
-         </div>))}
+         
       </div>
       {/* <div className="p-8 mx-4 gap-8 w-full">
         <p className="text-4xl w-1/3">{event?.about}</p>
