@@ -62,9 +62,7 @@ export default function Home() {
               <div className="relative w-[15vh] h-[30vh]">
                 <div className="w-full h-full border-solid border-8 border-pink border-r-transparent rounded-tl-[30vh] rounded-bl-[30vh] outline outline-[24px] outline-base bg-base">
                 </div>
-                <div className="absolute top-1/2 -translate-y-1/2 translate-x-1/2">
-                  <img className="w-full object-contain scale-[200%]" src={darkMode ? "/dark.png" : "/light.png"} alt="" />
-                </div>
+                <img className="absolute top-0 bottom-0 w-[200%] object-contain" src={darkMode ? "/dark.png" : "/light.png"} alt="" />
               </div>
             </div>
             <div className="w-1/2">
