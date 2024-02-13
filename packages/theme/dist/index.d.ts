@@ -2,17 +2,20 @@ import * as tailwindcss_types_config from 'tailwindcss/types/config';
 import { labels } from '@catppuccin/palette';
 import { roles } from '@rose-pine/palette';
 
-interface CatppuccinColors extends ColorScheme<{
+interface CatppuccinColorsScheme extends ColorScheme<{
     [K in keyof typeof labels]: string;
 }> {
 }
-declare const catppuccinColors: CatppuccinColors;
+type CatppuccinColors = {
+    [K in keyof typeof labels]: string;
+};
+declare const catppuccinColors: CatppuccinColorsScheme;
 
-interface RosePineColors extends ColorScheme<{
+interface RosePineColorsScheme extends ColorScheme<{
     [K in keyof typeof roles]: string;
 }> {
 }
-declare const rosePineColors: RosePineColors;
+declare const rosePineColors: RosePineColorsScheme;
 
 interface ColorScheme<T> {
     light: Record<keyof T, string>;
@@ -21,4 +24,4 @@ interface ColorScheme<T> {
 
 declare const generateTailwindConfig: <T>(colorScheme: ColorScheme<T>) => tailwindcss_types_config.Config;
 
-export { type ColorScheme, catppuccinColors, generateTailwindConfig, rosePineColors };
+export { type CatppuccinColors, type CatppuccinColorsScheme, type ColorScheme, type RosePineColorsScheme, catppuccinColors, generateTailwindConfig, rosePineColors };
